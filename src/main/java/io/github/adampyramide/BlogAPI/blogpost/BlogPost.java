@@ -1,4 +1,4 @@
-package io.github.adam_elzahiri.BlogAPI.post;
+package io.github.adam_elzahiri.BlogAPI.blogpost;
 
 import io.github.adam_elzahiri.BlogAPI.user.User;
 import jakarta.persistence.*;
@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 public class BlogPost {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     private String title;
