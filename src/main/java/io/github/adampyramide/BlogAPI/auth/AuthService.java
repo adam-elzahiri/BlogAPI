@@ -1,6 +1,6 @@
 package io.github.adam_elzahiri.BlogAPI.auth;
 
-import io.github.adam_elzahiri.BlogAPI.exception.ApiRequestException;
+import io.github.adam_elzahiri.BlogAPI.exception.CustomException;
 import io.github.adam_elzahiri.BlogAPI.security.JwtService;
 import io.github.adam_elzahiri.BlogAPI.user.AuthUserDTO;
 import io.github.adam_elzahiri.BlogAPI.user.User;
@@ -33,7 +33,7 @@ public class AuthService {
 
     public void registerUser(AuthUserDTO userDTO) {
         if (userRepo.existsByUsername(userDTO.username()))
-            throw new ApiRequestException("Username is already taken", HttpStatus.CONFLICT);
+            throw new CustomException("Username is already taken", HttpStatus.CONFLICT);
 
         User user = userMapper.authDTOToEntity(userDTO);
         user.setPassword(passwordEncoder.encode(userDTO.password()));
@@ -51,7 +51,7 @@ public class AuthService {
             return jwtService.generateToken(userDTO.username());
         }
         catch (Exception e) {
-            throw new ApiRequestException("Incorrect username or password", HttpStatus.UNAUTHORIZED);
+            throw new CustomException("Incorrect username or password", HttpStatus.UNAUTHORIZED);
         }
     }
 
