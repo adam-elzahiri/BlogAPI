@@ -1,6 +1,6 @@
 package io.github.adam_elzahiri.BlogAPI.security;
 
-import io.github.adam_elzahiri.BlogAPI.exception.ApiRequestException;
+import io.github.adam_elzahiri.BlogAPI.exception.CustomException;
 import io.github.adam_elzahiri.BlogAPI.user.User;
 import io.github.adam_elzahiri.BlogAPI.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +20,7 @@ public class MyUserDetailsService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = userRepo.findByUsername(username)
-                .orElseThrow(() -> new ApiRequestException("User not found", HttpStatus.NOT_FOUND));
+                .orElseThrow(() -> new CustomException("User not found", HttpStatus.NOT_FOUND));
         return new UserPrincipal(user);
     }
 }

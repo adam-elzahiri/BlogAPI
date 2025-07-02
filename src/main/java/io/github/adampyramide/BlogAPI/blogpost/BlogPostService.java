@@ -1,6 +1,6 @@
 package io.github.adam_elzahiri.BlogAPI.blogpost;
 
-import io.github.adam_elzahiri.BlogAPI.exception.ApiRequestException;
+import io.github.adam_elzahiri.BlogAPI.exception.CustomException;
 import io.github.adam_elzahiri.BlogAPI.security.SecurityUtils;
 import io.github.adam_elzahiri.BlogAPI.user.User;
 import org.springframework.http.HttpStatus;
@@ -63,12 +63,12 @@ public class BlogPostService {
 
     private BlogPost getBlogPostOrThrow(int id) {
         return repo.findById(id)
-                .orElseThrow(() -> new ApiRequestException("Blogpost not found", HttpStatus.NOT_FOUND));
+                .orElseThrow(() -> new CustomException("Blogpost not found", HttpStatus.NOT_FOUND));
     }
 
     private void checkAuthorOrThrow(BlogPost blogPost, User user) {
         if (blogPost.getAuthor().getId() != user.getId())
-            throw new ApiRequestException("Not authorized", HttpStatus.UNAUTHORIZED);
+            throw new CustomException("Not authorized", HttpStatus.UNAUTHORIZED);
     }
 
 }
