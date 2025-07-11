@@ -3,7 +3,6 @@ package io.github.adam_elzahiri.BlogAPI.user;
 import io.github.adam_elzahiri.BlogAPI.blogpost.BlogPostResponseDTO;
 import io.github.adam_elzahiri.BlogAPI.blogpost.BlogPostService;
 import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;
