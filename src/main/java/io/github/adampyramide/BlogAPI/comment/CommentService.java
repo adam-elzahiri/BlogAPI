@@ -1,8 +1,5 @@
 package io.github.adam_elzahiri.BlogAPI.comment;
 
-import io.github.adam_elzahiri.BlogAPI.blogpost.BlogPost;
-import io.github.adam_elzahiri.BlogAPI.blogpost.BlogPostRepository;
-import io.github.adam_elzahiri.BlogAPI.blogpost.BlogPostResponseDTO;
 import io.github.adam_elzahiri.BlogAPI.blogpost.BlogPostService;
 import io.github.adam_elzahiri.BlogAPI.exception.CustomException;
 import io.github.adam_elzahiri.BlogAPI.security.SecurityUtils;
@@ -28,6 +25,10 @@ public class CommentService {
         this.blogPostService = blogPostService;
         this.securityUtils = securityUtils;
     }
+
+    // ====================
+    // Public methods
+    // ====================
 
     public CommentResponseDTO getCommentById(Long id) {
         return mapper.toResponseDTO(
@@ -79,6 +80,10 @@ public class CommentService {
                 .map(mapper::toResponseDTO)
                 .toList();
     }
+
+    // ====================
+    // Private methods
+    // ====================
 
     private Comment getCommentOrThrow(Long id) {
         return repo.findById(id)
