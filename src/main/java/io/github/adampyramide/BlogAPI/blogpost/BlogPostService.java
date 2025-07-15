@@ -3,7 +3,6 @@ package io.github.adam_elzahiri.BlogAPI.blogpost;
 import io.github.adam_elzahiri.BlogAPI.exception.CustomException;
 import io.github.adam_elzahiri.BlogAPI.security.SecurityUtils;
 import io.github.adam_elzahiri.BlogAPI.user.User;
-import io.github.adam_elzahiri.BlogAPI.user.UserRepository;
 import io.github.adam_elzahiri.BlogAPI.user.UserService;
 import io.github.adam_elzahiri.BlogAPI.util.OwnershipValidator;
 import org.springframework.http.HttpStatus;
@@ -40,10 +39,7 @@ public class BlogPostService {
     }
 
     public BlogPostResponseDTO getBlogPostById(Long id) {
-        return mapper.toResponseDTO(
-                repo.findById(id)
-                        .orElseThrow(() -> new CustomException("Blogpost not found", HttpStatus.NOT_FOUND))
-        );
+        return mapper.toResponseDTO(getBlogPostOrThrow(id));
     }
 
     public void createBlogPost(BlogPostRequestDTO blogPostDTO) {
