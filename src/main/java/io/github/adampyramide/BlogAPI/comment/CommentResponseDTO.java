@@ -1,6 +1,5 @@
 package io.github.adam_elzahiri.BlogAPI.comment;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
 import io.github.adam_elzahiri.BlogAPI.user.PublicUserDTO;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
