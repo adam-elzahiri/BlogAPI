@@ -1,5 +1,6 @@
 package io.github.adam_elzahiri.BlogAPI.blogpost;
 
+import io.github.adam_elzahiri.BlogAPI.reaction.ReactionType;
 import io.github.adam_elzahiri.BlogAPI.user.PublicUserDTO;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -21,5 +22,6 @@ public class BlogPostResponseDTO {
     private LocalDateTime createTime;
     private long likeCount;
     private long dislikeCount;
+    private ReactionType userReaction;
 
 }
