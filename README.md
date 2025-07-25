@@ -1,46 +1,80 @@
 # Blog API
-A personal project I built to deepen my backend web development skills and demonstrate my experience.
+### What this project is
+RESTful Blog API built with Java 17 and Spring Boot.  
+It supports full CRUD functionality for blog posts, comments, reactions (likes/dislikes), and secure user authentication using JWT tokens. 
+The API follows REST conventions and best practices to provide a scalable and well-structured backend.
 
-## API Documentation
+### Why I built this project
+This personal project was created to deepen my understanding of backend web development and demonstrate my ability to design secure, scalable APIs from scratch.  
+It is the first REST API I’ve built entirely independently — without tutorials or external guidance.
+
+## 📚 API Documentation
 Interactive API documentation is available via Swagger UI:
-https://adam_elzahiri.github.io/BlogAPI/.
+**https://adam_elzahiri.github.io/BlogAPI/**
 
-## Try the API
-You can test the Blog REST API using tools like Postman or curl. Hosted on render.com, **expect windup time on first request.**
+## 🧪 Try the API
+The API is hosted on Render — please note it may take a few seconds to respond to the first request due to server spin-up.
 
-**Base URL**
-
+### 🔗 Base URL
 All requests should use the following base URL:
-https://blogapi-vzsx.onrender.com
+**https://blogapi-vzsx.onrender.com/api/**
 
-**Importing Endpoints**
+### 📥 Importing Endpoints
+Import this OpenAPI document into tools like Postman or Insomnia:
+**[docs/api-docs.json](docs/api-docs.json)**
 
-You can import all API endpoints using the OpenAPI document:
-[docs/api-docs.json](docs/api-docs.json)
+### 🔐 Authentication
 
-**Authentication**
+Some endpoints require a JWT token.
 
-Some routes require a JWT token for authentication. You can get a token by registering or logging in. These return a JWT token. You’ll need to include this token in the Authorization header for any protected routes.
+1. Register or log in to receive a token.
+2. Include the token in your request headers: ```Authorization: Bearer YOUR_TOKEN_HERE```
 
-Refer to API documentation for the register and login endpoints.
+Refer to the API docs for details on the login and registration endpoints.
 
-## Utilized technologies
-**Project**
-- Java (Maven)
+## ⚙️ Features
+
+### ✅ Secure User Authentication
+- Register and login with username and password
+- Passwords securely hashed
+- JWT-based authentication
+
+### 📝 Blog Post Management
+- Full CRUD for blog posts
+- Pagination (sorted by newest first)
+- Filter by author ID
+- Bulk deletion support
+
+### 💬 Comment System
+- Full CRUD for comments
+- Nested replies using `parentCommentId`
+- Paginated by post or by user
+- Bulk deletion support
+
+### 👍 Reactions System
+- Like or dislike blog posts
+- Single reaction per user per post
+- Ability to change or remove reaction
+- Filter reactions by type (`LIKE`, `DISLIKE`)
+- Pagination for reactions
+
+### 👤 User Profiles
+- View public user data by ID
+- Retrieve posts and comments by a specific user
+
+### 🔄 Pagination & Sorting
+- Consistent support for `page`, `size`, and `sort` query params
+- Responses include total count, page number, total pages, etc.
+
+## 🛠️ Technologies Used
+- Java 17
 - Spring Boot
-- MySQL
-
-**Development**
-- Intellij IDEA Community
+- PostgreSQL
+- Maven
+- IntelliJ IDEA
 - Postman
 
-## Features
-- Secure user registration with password hashing 
-- User authentication using JWT tokens 
-- Full CRUD operations for blog posts (Create, Read, Update, Delete)
-- Paginated retrieval of all blog posts 
-- Paginated retrieval of blog posts authored by a specific user 
-- Full CRUD operations for comments on blog posts, including bulk deletion 
-- Paginated retrieval of comments on a specific blog post 
-- Paginated retrieval of comments made by a specific user 
-- Fetch user profile data by user ID
+## 📄 License
+
+Licensed under the [MIT License](LICENSE).  
+© 2025 Adam El Zahiri
