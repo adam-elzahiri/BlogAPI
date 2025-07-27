@@ -1,6 +1,6 @@
 package io.github.adam_elzahiri.BlogAPI.auth;
 
-public record AuthResponse(
+public record AuthResponseDTO(
 
         String token
 
