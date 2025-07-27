@@ -1,9 +1,9 @@
-package io.github.adam_elzahiri.BlogAPI.user;
+package io.github.adam_elzahiri.BlogAPI.auth;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
-public record AuthUserDTO(
+public record AuthRequest(
 
         @NotBlank(message = "Username must not be blank")
         String username,

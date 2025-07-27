@@ -1,6 +1,6 @@
 package io.github.adam_elzahiri.BlogAPI.user;
 
-public record PublicUserDTO(
+public record PublicUserResponse(
 
         Long id,
         String username

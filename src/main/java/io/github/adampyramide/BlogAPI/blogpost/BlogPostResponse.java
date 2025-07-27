@@ -1,7 +1,7 @@
 package io.github.adam_elzahiri.BlogAPI.blogpost;
 
 import io.github.adam_elzahiri.BlogAPI.reaction.ReactionType;
-import io.github.adam_elzahiri.BlogAPI.user.PublicUserDTO;
+import io.github.adam_elzahiri.BlogAPI.user.PublicUserResponse;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -13,10 +13,10 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class BlogPostResponseDTO {
+public class BlogPostResponse {
     
     private Long id;
-    private PublicUserDTO author;
+    private PublicUserResponse author;
     private String title;
     private String body;
     private LocalDateTime createTime;
