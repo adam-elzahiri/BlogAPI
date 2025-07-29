@@ -4,6 +4,7 @@ import io.github.adam_elzahiri.BlogAPI.blogpost.BlogPostFetcher;
 import io.github.adam_elzahiri.BlogAPI.exception.CustomException;
 import io.github.adam_elzahiri.BlogAPI.security.SecurityUtils;
 import io.github.adam_elzahiri.BlogAPI.user.User;
+import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
@@ -13,6 +14,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
+@RequiredArgsConstructor
 public class ReactionService {
 
     private final ReactionRepository repo;
@@ -20,13 +22,6 @@ public class ReactionService {
 
     private final BlogPostFetcher blogPostFetcher;
     private final SecurityUtils securityUtils;
-
-    public ReactionService(ReactionRepository repo, ReactionMapper mapper, BlogPostFetcher blogPostFetcher, SecurityUtils securityUtils) {
-        this.repo = repo;
-        this.mapper = mapper;
-        this.blogPostFetcher = blogPostFetcher;
-        this.securityUtils = securityUtils;
-    }
 
     // ====================
     // Public methods

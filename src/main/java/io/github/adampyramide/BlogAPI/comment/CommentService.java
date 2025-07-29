@@ -4,12 +4,14 @@ import io.github.adam_elzahiri.BlogAPI.blogpost.BlogPostFetcher;
 import io.github.adam_elzahiri.BlogAPI.exception.CustomException;
 import io.github.adam_elzahiri.BlogAPI.security.SecurityUtils;
 import io.github.adam_elzahiri.BlogAPI.util.OwnershipValidator;
+import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 @Service
+@RequiredArgsConstructor
 public class CommentService {
 
     private final CommentRepository repo;
@@ -17,13 +19,6 @@ public class CommentService {
 
     private final BlogPostFetcher blogPostFetcher;
     private final SecurityUtils securityUtils;
-
-    public CommentService(CommentRepository repo, CommentMapper mapper, BlogPostFetcher blogPostFetcher, SecurityUtils securityUtils) {
-        this.repo = repo;
-        this.mapper = mapper;
-        this.blogPostFetcher = blogPostFetcher;
-        this.securityUtils = securityUtils;
-    }
 
     // ====================
     // Public methods
