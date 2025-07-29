@@ -7,7 +7,6 @@ import io.github.adam_elzahiri.BlogAPI.security.SecurityUtils;
 import io.github.adam_elzahiri.BlogAPI.user.User;
 import io.github.adam_elzahiri.BlogAPI.user.UserService;
 import io.github.adam_elzahiri.BlogAPI.util.OwnershipValidator;
-import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
