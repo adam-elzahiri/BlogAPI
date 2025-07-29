@@ -1,4 +1,4 @@
-package io.github.adam_elzahiri.BlogAPI.config;
+package io.github.adam_elzahiri.BlogAPI.filestorage;
 
 import com.cloudinary.Cloudinary;
 import com.cloudinary.utils.ObjectUtils;
