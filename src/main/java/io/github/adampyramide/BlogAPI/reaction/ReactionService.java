@@ -1,7 +1,7 @@
 package io.github.adam_elzahiri.BlogAPI.reaction;
 
 import io.github.adam_elzahiri.BlogAPI.blogpost.BlogPostFetcher;
-import io.github.adam_elzahiri.BlogAPI.exception.CustomException;
+import io.github.adam_elzahiri.BlogAPI.error.ApiException;
 import io.github.adam_elzahiri.BlogAPI.security.SecurityUtils;
 import io.github.adam_elzahiri.BlogAPI.user.User;
 import lombok.RequiredArgsConstructor;
@@ -62,13 +62,19 @@ public class ReactionService {
     public void deleteReactionByPostId(Long postId) {
         blogPostFetcher.getByIdOrThrow(postId);
 
+        Long userId = securityUtils.getAuthenticatedUser().getId();
         ReactionId reactionId = new ReactionId(
-                securityUtils.getAuthenticatedUser().getId(),
+                userId,
                 postId
         );
 
         if (!repo.existsById(reactionId)) {
-            throw new CustomException("Reaction not found", HttpStatus.NOT_FOUND);
+            throw new ApiException(
+                    HttpStatus.NOT_FOUND,
+                    "REACTION_NOT_FOUND",
+                    "Reaction with post ID %d and user ID %d not found."
+                            .formatted(postId, userId)
+            );
         }
 
         repo.deleteById(reactionId);

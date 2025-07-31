@@ -1,6 +1,6 @@
 package io.github.adam_elzahiri.BlogAPI.security;
 
-import io.github.adam_elzahiri.BlogAPI.exception.CustomException;
+import io.github.adam_elzahiri.BlogAPI.error.ApiException;
 import io.github.adam_elzahiri.BlogAPI.user.User;
 import io.github.adam_elzahiri.BlogAPI.user.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -17,7 +17,11 @@ public class SecurityUtils {
     public User getAuthenticatedUser() {
         String username = SecurityContextHolder.getContext().getAuthentication().getName();
         return userRepo.findByUsername(username)
-                .orElseThrow(() -> new CustomException("Authenticated user not found", HttpStatus.NOT_FOUND));
+                .orElseThrow(() -> new ApiException(
+                        HttpStatus.NOT_FOUND,
+                        "AUTHENTICATED_USER_NOT_FOUND",
+                        "Authenticated user not found"
+                ));
     }
 
 }
