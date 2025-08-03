@@ -1,5 +1,7 @@
 package io.github.adam_elzahiri.BlogAPI.user;
 
+import io.github.adam_elzahiri.BlogAPI.user.dto.PublicUserResponse;
+import io.github.adam_elzahiri.BlogAPI.user.dto.UpdateUserRequest;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;

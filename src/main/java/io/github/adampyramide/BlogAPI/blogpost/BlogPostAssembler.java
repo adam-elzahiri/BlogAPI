@@ -1,5 +1,6 @@
 package io.github.adam_elzahiri.BlogAPI.blogpost;
 
+import io.github.adam_elzahiri.BlogAPI.blogpost.dto.BlogPostResponse;
 import io.github.adam_elzahiri.BlogAPI.reaction.ReactionService;
 import io.github.adam_elzahiri.BlogAPI.reaction.ReactionType;
 import io.github.adam_elzahiri.BlogAPI.security.SecurityUtils;

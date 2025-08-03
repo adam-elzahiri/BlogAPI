@@ -1,6 +1,8 @@
 package io.github.adam_elzahiri.BlogAPI.user;
 
 import io.github.adam_elzahiri.BlogAPI.auth.AuthRequest;
+import io.github.adam_elzahiri.BlogAPI.user.dto.PublicUserResponse;
+import io.github.adam_elzahiri.BlogAPI.user.dto.UpdateUserRequest;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingTarget;

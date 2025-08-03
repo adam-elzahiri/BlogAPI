@@ -1,6 +1,8 @@
 package io.github.adam_elzahiri.BlogAPI.comment;
 
 import io.github.adam_elzahiri.BlogAPI.blogpost.BlogPostQueryService;
+import io.github.adam_elzahiri.BlogAPI.comment.dto.CommentRequest;
+import io.github.adam_elzahiri.BlogAPI.comment.dto.CommentResponse;
 import io.github.adam_elzahiri.BlogAPI.error.ApiException;
 import io.github.adam_elzahiri.BlogAPI.security.SecurityUtils;
 import io.github.adam_elzahiri.BlogAPI.user.UserAssembler;

@@ -1,5 +1,7 @@
 package io.github.adam_elzahiri.BlogAPI.comment;
 
+import io.github.adam_elzahiri.BlogAPI.comment.dto.CommentRequest;
+import io.github.adam_elzahiri.BlogAPI.comment.dto.CommentResponse;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;

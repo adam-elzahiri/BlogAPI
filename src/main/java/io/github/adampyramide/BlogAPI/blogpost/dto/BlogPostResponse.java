@@ -1,7 +1,7 @@
-package io.github.adam_elzahiri.BlogAPI.blogpost;
+package io.github.adam_elzahiri.BlogAPI.blogpost.dto;
 
 import io.github.adam_elzahiri.BlogAPI.reaction.ReactionType;
-import io.github.adam_elzahiri.BlogAPI.user.PublicUserResponse;
+import io.github.adam_elzahiri.BlogAPI.user.dto.PublicUserResponse;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

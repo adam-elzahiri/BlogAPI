@@ -1,5 +1,8 @@
 package io.github.adam_elzahiri.BlogAPI.blogpost;
 
+import io.github.adam_elzahiri.BlogAPI.blogpost.dto.BlogPostResponse;
+import io.github.adam_elzahiri.BlogAPI.blogpost.dto.CreateBlogPostRequest;
+import io.github.adam_elzahiri.BlogAPI.blogpost.dto.UpdateBlogPostRequest;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.enums.ParameterIn;

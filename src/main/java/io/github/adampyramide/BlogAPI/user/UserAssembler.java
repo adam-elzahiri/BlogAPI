@@ -4,6 +4,7 @@ import io.github.adam_elzahiri.BlogAPI.error.ApiException;
 import io.github.adam_elzahiri.BlogAPI.filestorage.CloudinaryFileStorageService;
 import io.github.adam_elzahiri.BlogAPI.filestorage.FileValidationRule;
 import io.github.adam_elzahiri.BlogAPI.filestorage.MimeTypeRules;
+import io.github.adam_elzahiri.BlogAPI.user.dto.PublicUserResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 

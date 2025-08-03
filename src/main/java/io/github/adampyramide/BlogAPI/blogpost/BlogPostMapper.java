@@ -1,5 +1,8 @@
 package io.github.adam_elzahiri.BlogAPI.blogpost;
 
+import io.github.adam_elzahiri.BlogAPI.blogpost.dto.BlogPostResponse;
+import io.github.adam_elzahiri.BlogAPI.blogpost.dto.CreateBlogPostRequest;
+import io.github.adam_elzahiri.BlogAPI.blogpost.dto.UpdateBlogPostRequest;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingTarget;

@@ -2,6 +2,8 @@ package io.github.adam_elzahiri.BlogAPI.reaction;
 
 import io.github.adam_elzahiri.BlogAPI.blogpost.BlogPostQueryService;
 import io.github.adam_elzahiri.BlogAPI.error.ApiException;
+import io.github.adam_elzahiri.BlogAPI.reaction.dto.ReactionRequest;
+import io.github.adam_elzahiri.BlogAPI.reaction.dto.ReactionResponse;
 import io.github.adam_elzahiri.BlogAPI.security.SecurityUtils;
 import io.github.adam_elzahiri.BlogAPI.user.User;
 import lombok.RequiredArgsConstructor;

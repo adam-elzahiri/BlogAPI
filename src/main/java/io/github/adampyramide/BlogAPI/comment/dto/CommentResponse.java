@@ -1,6 +1,6 @@
-package io.github.adam_elzahiri.BlogAPI.comment;
+package io.github.adam_elzahiri.BlogAPI.comment.dto;
 
-import io.github.adam_elzahiri.BlogAPI.user.PublicUserResponse;
+import io.github.adam_elzahiri.BlogAPI.user.dto.PublicUserResponse;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

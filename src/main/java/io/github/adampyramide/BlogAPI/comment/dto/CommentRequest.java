@@ -1,4 +1,4 @@
-package io.github.adam_elzahiri.BlogAPI.comment;
+package io.github.adam_elzahiri.BlogAPI.comment.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
