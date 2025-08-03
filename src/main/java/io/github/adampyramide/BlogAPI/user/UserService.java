@@ -6,7 +6,7 @@ import io.github.adam_elzahiri.BlogAPI.filestorage.FileUploadResult;
 import io.github.adam_elzahiri.BlogAPI.filestorage.FileValidationRule;
 import io.github.adam_elzahiri.BlogAPI.filestorage.MimeTypeRules;
 import io.github.adam_elzahiri.BlogAPI.security.SecurityUtils;
-import io.github.adam_elzahiri.BlogAPI.user.dto.PublicUserResponse;
+import io.github.adam_elzahiri.BlogAPI.user.dto.UserPreviewResponse;
 import io.github.adam_elzahiri.BlogAPI.user.dto.UpdateUserRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -47,7 +47,7 @@ public class UserService {
         repo.save(user);
     }
 
-    public PublicUserResponse getUserById(Long id) {
+    public UserPreviewResponse getUserById(Long id) {
         return assembler.getUserResponseById(id);
     }
 

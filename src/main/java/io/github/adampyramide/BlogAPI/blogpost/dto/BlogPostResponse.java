@@ -1,7 +1,7 @@
 package io.github.adam_elzahiri.BlogAPI.blogpost.dto;
 
 import io.github.adam_elzahiri.BlogAPI.reaction.ReactionType;
-import io.github.adam_elzahiri.BlogAPI.user.dto.PublicUserResponse;
+import io.github.adam_elzahiri.BlogAPI.user.dto.UserPreviewResponse;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,7 +16,7 @@ import java.time.LocalDateTime;
 public class BlogPostResponse {
     
     private Long id;
-    private PublicUserResponse author;
+    private UserPreviewResponse author;
     private String title;
     private String body;
     private LocalDateTime createdAt;
