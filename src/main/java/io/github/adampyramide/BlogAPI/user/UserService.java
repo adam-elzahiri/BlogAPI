@@ -6,8 +6,8 @@ import io.github.adam_elzahiri.BlogAPI.filestorage.FileUploadResult;
 import io.github.adam_elzahiri.BlogAPI.filestorage.FileValidationRule;
 import io.github.adam_elzahiri.BlogAPI.filestorage.MimeTypeRules;
 import io.github.adam_elzahiri.BlogAPI.security.SecurityUtils;
-import io.github.adam_elzahiri.BlogAPI.user.dto.UserPreviewResponse;
 import io.github.adam_elzahiri.BlogAPI.user.dto.UpdateUserRequest;
+import io.github.adam_elzahiri.BlogAPI.user.dto.UserProfileResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -19,7 +19,7 @@ public class UserService {
 
     private final UserRepository repo;
     private final UserMapper mapper;
-    private final UserAssembler assembler;
+    private final UserQueryService queryService;
 
     private final SecurityUtils securityUtils;
     private final CloudinaryFileStorageService fileStorageService;
@@ -47,8 +47,8 @@ public class UserService {
         repo.save(user);
     }
 
-    public UserPreviewResponse getUserById(Long id) {
-        return assembler.getUserResponseById(id);
+    public UserProfileResponse getUserById(Long id) {
+        return mapper.toUserProfileResponse(queryService.getByIdOrThrow(id));
     }
 
     // ====================
