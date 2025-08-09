@@ -3,7 +3,6 @@ package io.github.adam_elzahiri.BlogAPI.user;
 import io.github.adam_elzahiri.BlogAPI.error.ApiException;
 import io.github.adam_elzahiri.BlogAPI.filestorage.CloudinaryFileStorageService;
 import io.github.adam_elzahiri.BlogAPI.filestorage.FileUploadResult;
-import io.github.adam_elzahiri.BlogAPI.filestorage.FileValidationRule;
 import io.github.adam_elzahiri.BlogAPI.filestorage.MimeTypeRules;
 import io.github.adam_elzahiri.BlogAPI.security.SecurityUtils;
 import io.github.adam_elzahiri.BlogAPI.user.dto.UpdateUserRequest;
