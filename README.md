@@ -7,7 +7,7 @@ Built independently to showcase my API design skills — no tutorials, just self
 See **[adr](adr)** for details on the technical and architectural decisions made.
 
 ### API Documentation
-**[API Documentation](https://adam_elzahiri.github.io/BlogAPI/)** is available via Swagger UI.
+**[API Documentation](https://adam-elzahiri.github.io/BlogAPI/)** is available via Swagger UI.
 
 ## Try the API
 The API is hosted on Render — please note it may take a few seconds to respond to the first request due to server cold start.
