@@ -1,7 +1,7 @@
 # Blog API
-RESTful API built with Java 17, Spring Boot & PostgreSQL. Features blog posts, comments, reactions, etc.
+RESTful Blog API built with Java 17 and Spring Boot, backed by a self-designed PostgreSQL schema. Built independently as a first project in REST API design and backend development — no specific tutorials, no AI-generated code. Implements JWT authentication, full CRUD for posts/comments/reactions, nested comment replies, pagination, and file uploads via Cloudinary. Documented with OpenAPI/Swagger and deployed live on Render.
 
-Built independently to showcase my API design skills — no tutorials, just self-driven research and implementation.
+
 
 ### Design Decisions
 See **[adr](adr)** for details on the technical and architectural decisions made.
